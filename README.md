@@ -1,4 +1,2 @@
-# worldFun
+# https://zellyo-digital0.github.io/worldFun
 
-Visit: https://faruq05.github.io/worldFun/
-# worldFun
