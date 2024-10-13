@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/venobox.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+</head>
+
+<body>
+    <!-- header starts========================================= -->
+    <div class="header" id="header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <div class="col-md-3">
+                    <a class="navbar-brand" href="index.html"><img src="images/logo.png" class="img-fluid" alt="logo"></a>
+                </div>
+
+                <div class="col-md-6 nav_responsive">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto me-auto mb-2 mb-lg-0">
+                            <li class="nav-item active">
+                                <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contribute.html">Contribute</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-3 usp">
+                    <div class="user_portal">
+                        <ul>
+                            <li class="me-4">
+                                <a class="nav-link" href="signin.html"><i class="fa-solid fa-user pe-1"></i> SignIn</a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="register.html">Register</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- offcanvas -->
+
+                <div class="col-md-3">
+                    <div class="sidemenu">
+                        <a class="side_button" data-bs-toggle="offcanvas" data-bs-target="#sideOffcanvas">
+                            <i class="fa-solid fa-bars"></i>
+                        </a>
+
+                        <div class="sideOffcanvas offcanvas-end" tabindex="-1" id="sideOffcanvas"
+                            aria-labelledby="sideOffcanvasLabel">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="sideOffcanvasLabel"></h5>
+                                <button type="button" class="fa-solid fa-x" id="sideCloseOffcanvas"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <ul class="navbar-nav ms-auto me-auto mb-2 mb-lg-0">
+                                    <li class="nav-item active">
+                                        <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="contribute.html">Contribute</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="about.html">About</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="contact.html">Contact</a>
+                                    </li>
+                                </ul>
+                                <div class="user_portal">
+                                    <ul>
+                                        <li class="me-4">
+                                            <a class="nav-link" href="signin.html"><i class="fa-solid fa-user pe-1"></i>
+                                                SignIn</a>
+                                        </li>
+                                        <li>
+                                            <a class="nav-link" href="register.html">Register</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- header ends============================ -->
+
+    <!-- banner starts =========================== -->
+    <div class="banner cp60" id="banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="banner_content text-center">
+                        <h1>Welcome to WorldFun</h1>
+                        <h2>Explore Exciting Location Around the World</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- banner ends============================== -->
+
+    <!-- find city fun search form starts================ -->
+    <div class="cityFun" id="cityFun">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <form action="" method="post" id="cityFun_search">
+                        <div class="country_box custom-select" id="country_box">
+                            <label for="country">Country:</label>
+                            <div class="select-wrapper">
+                                <select id="country" name="country" class="form-control" onchange="populateRegions()"
+                                    onclick="toggleDropdown('country')">
+                                    <option value="">Select Country</option>
+                                    <!-- Options will be populated dynamically using JavaScript -->
+                                </select>
+                                <i class="caret-icon fas fa-caret-down" onclick="toggleDropdown('country')"></i>
+                            </div>
+                        </div>
+
+                        <div class="region_box" id="region_box">
+                            <label for="region">Region/State/Province:</label>
+                            <div class="select-wrapper">
+                                <select id="region" name="region" class="form-control" onchange="populateCities()"
+                                    onclick="toggleDropdown('region')">
+                                    <option value="">Select region</option>
+                                    <!-- Options will be populated dynamically using JavaScript -->
+                                </select>
+                                <i class="caret-icon fas fa-caret-down" onclick="toggleDropdown('region')"></i>
+                            </div>
+                        </div>
+
+                        <div class="city_box" id="city_box">
+                            <label for="city">City/Town/Village:</label>
+                            <div class="select-wrapper">
+                                <select id="city" name="city" class="form-control" onclick="toggleDropdown('city')">
+                                    <option value="">Select city</option>
+                                    <!-- Options will be populated dynamically using JavaScript -->
+                                </select>
+                                <i class="caret-icon fas fa-caret-down" onclick="toggleDropdown('city')"></i>
+                            </div>
+                        </div>
+
+                        <input type="submit" value="Find CityFun" class="btn_gen">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- cityFun ends====================================== -->
+
+    <!-- search items start=========================== -->
+    <div class="searchItems cp60" id="searchItems">
+        <div class="container">
+            <div class="row g-4">
+                <!-- featured business -->
+                <div class="col-lg-6 col-md-12">
+                    <div class="places">
+                        <div class="badgee d-flex align-items-center"><img src="images/shield.png"
+                                class="img-fluid pe-2" alt="shield">
+                            <h4>featured business</h4>
+                        </div>
+                        <h3>Get up close with the furry Oklahama City Zoo residents </h3>
+                        <p>Spanning 119 acres of diverse (manmade and natural) hobitats and home to over 1,900 animals
+                            of all shopes and sizes, the beloved Oklahama City Zoo is a great way to explore some of the
+                            world’s most unique environments with the whole family!</p>
+                        <div class="location">
+                            <a href="" class="btn btn_gen me-3"><i class="fa-solid fa-location-dot pe-2"></i>View
+                                Map</a>
+                            <a href="" class="btn btn_gen btn_gen2"><i class="fa-solid fa-globe pe-2"></i>View
+                                Website</a>
+                        </div>
+
+                        <div class="image_gallery">
+                            <a class="venobox" data-gall="myGallery" title="zoo_image1" href="images/zoo_image1.png">
+                                <img src="images/zoo_image1.png" />
+                            </a>
+                            <a class="venobox" data-gall="myGallery" title="zoo_image2" href="images/zoo_image2.png">
+                                <img src="images/zoo_image2.png" />
+                            </a>
+                            <a class="venobox" data-gall="myGallery" title="zoo_image3" href="images/zoo_image3.png">
+                                <img src="images/zoo_image3.png" />
+                            </a>
+                            <a class="venobox" data-gall="myGallery" title="zoo_image4" href="images/zoo_image4.png">
+                                <img src="images/zoo_image4.png" />
+                            </a>
+                            <a class="venobox" data-gall="myGallery" title="zoo_image5" href="images/zoo_image5.png">
+                                <img src="images/zoo_image5.png" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-12">
+                    <div class="places">
+                        <div class="badgee d-flex align-items-center"><img src="images/shield.png"
+                                class="img-fluid pe-2" alt="shield">
+                            <h4>featured business</h4>
+                        </div>
+                        <h3>Get up close with the furry Oklahama City Zoo residents </h3>
+                        <p>Spanning 119 acres of diverse (manmade and natural) hobitats and home to over 1,900 animals
+                            of all shopes and sizes, the beloved Oklahama City Zoo is a great way to explore some of the
+                            world’s most unique environments with the whole family!</p>
+                        <div class="location">
+                            <a href="" class="btn btn_gen me-3"><i class="fa-solid fa-location-dot pe-2"></i>View
+                                Map</a>
+                            <a href="" class="btn btn_gen btn_gen2"><i class="fa-solid fa-globe pe-2"></i>View
+                                Website</a>
+                        </div>
+
+                        <div class="image_gallery">
+                            <a class="venobox" data-gall="myGallery" title="zoo_image1" href="images/zoo_image1.png">
+                                <img src="images/zoo_image1.png" />
+                            </a>
+                            <a class="venobox" data-gall="myGallery" title="zoo_image2" href="images/zoo_image2.png">
+                                <img src="images/zoo_image2.png" />
+                            </a>
+                            <a class="venobox" data-gall="myGallery" title="zoo_image3" href="images/zoo_image3.png">
+                                <img src="images/zoo_image3.png" />
+                            </a>
+                            <a class="venobox" data-gall="myGallery" title="zoo_image4" href="images/zoo_image4.png">
+                                <img src="images/zoo_image4.png" />
+                            </a>
+                            <a class="venobox" data-gall="myGallery" title="zoo_image5" href="images/zoo_image5.png">
+                                <img src="images/zoo_image5.png" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- search items -->
+                <div class="col-lg-6 col-md-12">
+                    <div class="places search_places">
+                        <h3>Get up close with the furry Oklahama City Zoo residents </h3>
+                        <p>Spanning 119 acres of diverse (manmade and natural) hobitats and home to over 1,900 animals
+                            of all shopes and sizes, the beloved Oklahama City Zoo is a great way to explore some of the
+                            world’s most unique environments with the whole family!</p>
+                        <div class="location">
+                            <a href="" class="btn btn_gen me-3"><i class="fa-solid fa-location-dot pe-2"></i>View
+                                Map</a>
+                            <a href="" class="btn btn_gen me-3"><img src="images/latitude.png" class="img-fluid pe-2"
+                                    alt="latitude"></i>Latitude</a>
+                            <a href="" class="btn btn_gen btn_gen2"><i class="fa-solid fa-globe pe-2"></i>View
+                                Website</a>
+                        </div>
+
+                        <div class="image_gallery  d-flex">
+                            <a class="venobox" data-gall="myGallery" title="zoo_image1" href="images/zoo_image1.png">
+                                <img src="images/zoo_image1.png" />
+                            </a>
+                            <a class="venobox" data-gall="myGallery" title="zoo_image2" href="images/zoo_image2.png">
+                                <img src="images/zoo_image2.png" />
+                            </a>
+                            <a class="venobox" data-gall="myGallery" title="zoo_image3" href="images/zoo_image3.png">
+                                <img src="images/zoo_image3.png" />
+                            </a>
+                            <a class="venobox" data-gall="myGallery" title="zoo_image4" href="images/zoo_image4.png">
+                                <img src="images/zoo_image4.png" />
+                            </a>
+                            <a class="venobox" data-gall="myGallery" title="zoo_image5" href="images/zoo_image5.png">
+                                <img src="images/zoo_image5.png" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-12">
+                    <div class="places search_places">
+                        <h3>Get up close with the furry Oklahama City Zoo residents </h3>
+                        <p>Spanning 119 acres of diverse (manmade and natural) hobitats and home to over 1,900 animals
+                            of all shopes and sizes, the beloved Oklahama City Zoo is a great way to explore some of the
+                            world’s most unique environments with the whole family!</p>
+                        <div class="location">
+                            <a href="" class="btn btn_gen me-3"><i class="fa-solid fa-location-dot pe-2"></i>View
+                                Map</a>
+                            <a href="" class="btn btn_gen me-3"><img src="images/longitude.png" class="img-fluid pe-2"
+                                    alt="longitude"></i>Longitude</a>
+                            <a href="" class="btn btn_gen btn_gen2"><i class="fa-solid fa-globe pe-2"></i>View
+                                Website</a>
+                        </div>
+
+                        <div class="image_gallery  d-flex">
+                            <a class="venobox" data-gall="myGallery" title="zoo_image1" href="images/zoo_image1.png">
+                                <img src="images/zoo_image1.png" />
+                            </a>
+                            <a class="venobox" data-gall="myGallery" title="zoo_image2" href="images/zoo_image2.png">
+                                <img src="images/zoo_image2.png" />
+                            </a>
+                            <a class="venobox" data-gall="myGallery" title="zoo_image3" href="images/zoo_image3.png">
+                                <img src="images/zoo_image3.png" />
+                            </a>
+                            <a class="venobox" data-gall="myGallery" title="zoo_image4" href="images/zoo_image4.png">
+                                <img src="images/zoo_image4.png" />
+                            </a>
+                            <a class="venobox" data-gall="myGallery" title="zoo_image5" href="images/zoo_image5.png">
+                                <img src="images/zoo_image5.png" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- search items ends ====================-->
+
+    <!-- footer starts=================== -->
+    <div class="footer cp60" id="footer">
+        <div class="container">
+            <div class="row ">
+                <div class="col-md-4">
+                    <div class="footer_content">
+                        <img src="images/logo.png" class="img-fluid" alt="logo">
+                        <p>At WorldFun, we're passionate about connecting people with extraordinary experiences and
+                            businesses from around the globe. Our mission is to empower both travelers and local
+                            businesses by providing a platform where they can discover, share, and connect.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="footer_content">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li>
+                                <a href="index.html">Home</a>
+                            </li>
+                            <li>
+                                <a href="contribute.html">Contribute</a>
+                            </li>
+                            <li>
+                                <a href="about.html">About</a>
+                            </li>
+                            <li>
+                                <a href="contact.html">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer_cc">
+        <div class="container">
+            <div class="row text-center">
+                <p>Copyright 2024. All right reserved.</p>
+            </div>
+        </div>
+    </div>
+    <!-- footer ends==================== -->
+
+
+    <!-- .banner============================ -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.3/dist/index.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+    <script src="js/cityFunjs"></script>
+    <script src="js/venobox.js"></script>
+    <script>
+        // jQuery Version
+        $('.venobox').venobox({
+            // settings here
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            new VenoBox();
+        });
+    </script>
+</body>
+
+</html>

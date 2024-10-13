@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/venobox.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+</head>
+
+<body>
+    <!-- header starts========================================= -->
+    <div class="header" id="header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <div class="col-md-3">
+                    <a class="navbar-brand" href="index.html"><img src="images/logo.png" class="img-fluid" alt="logo"></a>
+                </div>
+
+                <div class="col-md-6 nav_responsive">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto me-auto mb-2 mb-lg-0">
+                            <li class="nav-item ">
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" aria-current="page" href="contribute.html">Contribute</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-3 usp">
+                    <div class="user_portal">
+                        <ul>
+                            <li class="me-4">
+                                <a class="nav-link" href="signin.html"><i class="fa-solid fa-user pe-1"></i> SignIn</a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="register.html">Register</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- offcanvas -->
+
+                <div class="col-md-3">
+                    <div class="sidemenu">
+                        <a class="side_button" data-bs-toggle="offcanvas" data-bs-target="#sideOffcanvas">
+                            <i class="fa-solid fa-bars"></i>
+                        </a>
+
+                        <div class="sideOffcanvas offcanvas-end" tabindex="-1" id="sideOffcanvas"
+                            aria-labelledby="sideOffcanvasLabel">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="sideOffcanvasLabel"></h5>
+                                <button type="button" class="fa-solid fa-x" id="sideCloseOffcanvas"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <ul class="navbar-nav ms-auto me-auto mb-2 mb-lg-0">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="index.html">Home</a>
+                                    </li>
+                                    <li class="nav-item active">
+                                        <a class="nav-link" aria-current="page" href="contribute.html">Contribute</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="about.html">About</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="contact.html">Contact</a>
+                                    </li>
+                                </ul>
+                                <div class="user_portal">
+                                    <ul>
+                                        <li class="me-4">
+                                            <a class="nav-link" href="signin.html"><i class="fa-solid fa-user pe-1"></i>
+                                                SignIn</a>
+                                        </li>
+                                        <li>
+                                            <a class="nav-link" href="register.html">Register</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- header ends============================ -->
+
+    <!-- banner starts =========================== -->
+    <div class="banner cp60" id="banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="banner_content text-center">
+                        <h1>Welcome to WorldFun</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- banner ends============================== -->
+
+    <!-- contribute starts form ============================== -->
+    <div class="contribute cp60" id="contribute">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form_entity">
+                        <h2>CityFun Database Builder</h2>
+                        <form action="" method="post" id="updateForm">
+                            <!-- Country -->
+                            <div class="datapart">
+                                <label for="country">Country:</label>
+                                <select id="country" name="country" class="form-control" onchange="populateRegions()">
+                                    <option value="">Select Country</option>
+                                    <!-- Options will be populated dynamically using JavaScript -->
+                                </select>
+                            </div>
+
+                            <!-- Region/State/Province -->
+                            <div class="datapart">
+                                <label for="region">Region/State/Province:</label>
+                                <select id="region" name="region" class="form-control" onchange="populateCities()">
+                                    <option value="">Select Region/State/Province</option>
+                                    <!-- Options will be populated dynamically using JavaScript -->
+                                </select>
+                            </div>
+
+                            <!-- City/Town/Village -->
+                            <div class="datapart">
+                                <label for="city">City/Town/Village:</label>
+                                <select id="city" name="city" class="form-control">
+                                    <option value="">Select City/Town/Village</option>
+                                    <!-- Options will be populated dynamically using JavaScript -->
+                                </select>
+                            </div>
+
+                            <!-- Title -->
+                            <div class="datapart">
+                                <label for="title">Title:</label>
+                                <input type="text" id="title" name="title" class="form-control" placeholder="Title"
+                                    required>
+                            </div>
+
+                            <!-- Description -->
+                            <div class="datapart">
+                                <label for="description">Description:</label>
+                                <textarea id="description" name="description" class="form-control" rows="4"
+                                    placeholder="Description" required></textarea>
+                            </div>
+
+                            <!-- Latitude -->
+                            <div class="datapart">
+                                <label for="latitude">Latitude:</label>
+                                <input type="text" id="latitude" name="latitude" class="form-control"
+                                    placeholder="Latitude" required>
+                            </div>
+
+                            <!-- Longitude -->
+                            <div class="datapart">
+                                <label for="longitude">Longitude:</label>
+                                <input type="text" id="longitude" name="longitude" class="form-control"
+                                    placeholder="Longitude" required>
+                            </div>
+
+                            <!-- Website -->
+                            <div class="datapart">
+                                <label for="website">Website:</label>
+                                <input type="url" id="website" name="website" class="form-control" placeholder="Website"
+                                    required>
+                            </div>
+
+                            <!-- Picture Upload -->
+                            <div id="pictures">
+                                <div class="datapart">
+                                    <label for="picture">Picture:</label>
+                                    <input type="file" id="picture" name="picture[]" accept="image/*"
+                                        class="form-control" required>
+
+                                </div>
+                            </div>
+
+                            <div class="contribute_buttons">
+                                <!-- Add Picture Button -->
+                                <button type="button" onclick="addPicture()" class="btn btn-success mb-3">Add
+                                    Picture</button> <br>
+                                <!-- Submit Button -->
+                                <button type="submit" class="btn_gen">Update Database</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer starts=================== -->
+    <div class="footer cp60" id="footer">
+        <div class="container">
+            <div class="row ">
+                <div class="col-md-4">
+                    <div class="footer_content">
+                        <img src="images/logo.png" class="img-fluid" alt="logo">
+                        <p>At WorldFun, we're passionate about connecting people with extraordinary experiences and
+                            businesses from around the globe. Our mission is to empower both travelers and local
+                            businesses by providing a platform where they can discover, share, and connect.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="footer_content">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li>
+                                <a href="index.html">Home</a>
+                            </li>
+                            <li>
+                                <a href="contribute.html">Contribute</a>
+                            </li>
+                            <li>
+                                <a href="about.html">About</a>
+                            </li>
+                            <li>
+                                <a href="contact.html">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer_cc">
+        <div class="container">
+            <div class="row text-center">
+                <p>Copyright 2024. All right reserved.</p>
+            </div>
+        </div>
+    </div>
+    <!-- footer ends==================== -->
+
+    <!-- .banner============================ -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.3/dist/index.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+    <script src="js/cityFunjs"></script>
+    <script src="js/venobox.js"></script>
+    <script>
+        // jQuery Version
+        $('.venobox').venobox({
+            // settings here
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            new VenoBox();
+        });
+    </script>
+</body>
+
+</html>

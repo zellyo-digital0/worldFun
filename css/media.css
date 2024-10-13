@@ -1,0 +1,190 @@
+@media(max-width:1024px) {
+    .cityFun form {
+        display: block;
+    }
+
+    .cityFun form select {
+        width: 100%;
+    }
+
+    .country_box,
+    .region_box,
+    .city_box {
+        margin-bottom: 15px;
+    }
+
+    .location .btn_gen {
+        margin: 0px 5px 10px 0px;
+    }
+
+
+    /* contact page */
+    .contact {
+        width: 60%;
+    }
+}
+
+@media(max-width:991px) {
+    .cityFun form {
+        width: 100%;
+    }
+
+    .places {
+        padding: 30px;
+    }
+
+    .form_entity {
+        padding: 30px;
+    }
+
+    .datapart label {
+        width: 40%;
+    }
+
+    .contribute_buttons {
+        width: 43%;
+        margin-right: auto;
+    }
+
+    .form_entity h2 {
+        margin-bottom: 30px;
+    }
+
+    .signIn_form {
+        width: auto;
+    }
+
+    /* offcanvas */
+    .nav_responsive {
+        display: none;
+    }
+
+    .sidemenu {
+        display: block;
+        text-align: end;
+    }
+
+    .usp {
+        display: none;
+    }
+
+    .sideOffcanvas {
+        width: 30%;
+        height: 61%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    /* about page */
+    .wd {
+        width: auto;
+    }
+
+    .cta {
+        padding: 20px;
+        width: auto;
+    }
+
+    /* contact page */
+    .contact {
+        width: auto;
+    }
+
+}
+
+
+@media(max-width:767px) {
+    h1 {
+        font-size: 33px;
+    }
+
+    .cp60 {
+        padding: 40px 15px;
+    }
+
+    .places {
+        padding: 20px;
+    }
+
+    .footer {
+        padding: 40px 15px 20px 15px;
+    }
+
+    .footer_content {
+        margin-bottom: 30px;
+    }
+
+    .form_entity {
+        padding: 30px;
+    }
+
+    .datapart {
+        flex-direction: column;
+    }
+
+    .datapart label {
+        width: 100%;
+    }
+
+    .contribute_buttons {
+        width: auto;
+    }
+
+    /* offcanvas */
+    .nav_responsive {
+        display: none;
+    }
+
+    .sidemenu {
+        display: block;
+        text-align: end;
+    }
+
+    .sideOffcanvas {
+        width: 40%;
+        height: 61%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    /* about page */
+    .wd {
+        width: auto;
+    }
+
+    .cta {
+        padding: 20px;
+        width: auto;
+        text-align: center;
+    }
+
+    .reach {
+        text-align: center !important;
+    }
+
+}
+
+@media(max-width:575px) {
+    .sideOffcanvas {
+        width: 50%;
+        height: 60%;
+    }
+}
+
+@media(max-width:475px) {
+    .sideOffcanvas {
+        width: 75%;
+        height: 60%;
+    }
+}
+
+@media(max-width:320px) {
+    .sideOffcanvas {
+        width: 80%;
+        height: 60%;
+    }
+}

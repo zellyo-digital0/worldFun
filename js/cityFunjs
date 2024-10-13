@@ -1,0 +1,218 @@
+// Static data for demonstration (replace this with your actual data)
+const countries = [
+    {
+        name: "USA",
+        regions: [
+            {
+                name: "California",
+                cities: ["Los Angeles", "San Francisco", "San Diego", "Sacramento", "San Jose", "Fresno", "Oakland", "Long Beach", "Bakersfield", "Santa Ana"]
+            },
+            {
+                name: "New York",
+                cities: ["New York City", "Buffalo", "Rochester", "Syracuse", "Albany", "Yonkers", "White Plains", "Utica", "New Rochelle", "Mount Vernon"]
+            },
+            {
+                name: "Texas",
+                cities: ["Houston", "Austin", "Dallas", "San Antonio", "Fort Worth", "El Paso", "Arlington", "Corpus Christi", "Plano", "Lubbock"]
+            },
+            {
+                name: "Florida",
+                cities: ["Miami", "Orlando", "Tampa", "Jacksonville", "Fort Lauderdale", "Tallahassee", "St. Petersburg", "Key West", "Pensacola", "Naples"]
+            },
+            {
+                name: "Illinois",
+                cities: ["Chicago", "Springfield", "Peoria", "Rockford", "Aurora", "Naperville", "Joliet", "Elgin", "Waukegan", "Decatur"]
+            },
+            {
+                name: "Washington",
+                cities: ["Seattle", "Spokane", "Tacoma", "Vancouver", "Bellevue", "Everett", "Kent", "Renton", "Yakima", "Olympia"]
+            },
+            {
+                name: "Georgia",
+                cities: ["Atlanta", "Augusta", "Savannah", "Athens", "Macon", "Columbus", "Albany", "Marietta", "Roswell", "Warner Robins"]
+            },
+            {
+                name: "Colorado",
+                cities: ["Denver", "Colorado Springs", "Aurora", "Fort Collins", "Boulder", "Pueblo", "Greeley", "Longmont", "Loveland", "Broomfield"]
+            },
+            {
+                name: "Arizona",
+                cities: ["Phoenix", "Tucson", "Mesa", "Chandler", "Scottsdale", "Glendale", "Tempe", "Gilbert", "Peoria", "Surprise"]
+            },
+            {
+                name: "Michigan",
+                cities: ["Detroit", "Grand Rapids", "Ann Arbor", "Lansing", "Flint", "Kalamazoo", "Dearborn", "Livonia", "Troy", "Sterling Heights"]
+            }
+        ]
+    },
+    {
+        name: "Canada",
+        regions: [
+            {
+                name: "Ontario",
+                cities: ["Toronto", "Ottawa", "Hamilton", "London", "Mississauga", "Brampton", "Markham", "Vaughan", "Kitchener", "Windsor"]
+            },
+            {
+                name: "Quebec",
+                cities: ["Montreal", "Quebec City", "Gatineau", "Laval", "Longueuil", "Sherbrooke", "Trois-Rivières", "Saguenay", "Levis", "Drummondville"]
+            },
+            {
+                name: "British Columbia",
+                cities: ["Vancouver", "Victoria", "Burnaby", "Surrey", "Kelowna", "Richmond", "Abbotsford", "Coquitlam", "Langley", "Delta"]
+            },
+            {
+                name: "Alberta",
+                cities: ["Calgary", "Edmonton", "Red Deer", "Lethbridge", "Medicine Hat", "Fort McMurray", "Grande Prairie", "Airdrie", "Spruce Grove", "Leduc"]
+            },
+            {
+                name: "Manitoba",
+                cities: ["Winnipeg", "Brandon", "Steinbach", "Thompson", "Portage la Prairie", "Selkirk", "Winkler", "Dauphin", "Morden", "Flin Flon"]
+            },
+            {
+                name: "Nova Scotia",
+                cities: ["Halifax", "Dartmouth", "Sydney", "Truro", "New Glasgow", "Kentville", "Amherst", "Bridgewater", "Yarmouth", "Antigonish"]
+            },
+            {
+                name: "New Brunswick",
+                cities: ["Saint John", "Moncton", "Fredericton", "Dieppe", "Miramichi", "Edmundston", "Bathurst", "Campbellton", "Oromocto", "Shediac"]
+            },
+            {
+                name: "Saskatchewan",
+                cities: ["Saskatoon", "Regina", "Prince Albert", "Moose Jaw", "Swift Current", "North Battleford", "Yorkton", "Estevan", "Weyburn", "Humboldt"]
+            },
+            {
+                name: "Newfoundland and Labrador",
+                cities: ["St. John's", "Mount Pearl", "Corner Brook", "Grand Falls-Windsor", "Gander", "Labrador City", "Happy Valley-Goose Bay", "Stephenville", "Marystown", "Clarenville"]
+            },
+            {
+                name: "Prince Edward Island",
+                cities: ["Charlottetown", "Summerside", "Stratford", "Cornwall", "Montague", "Kensington", "Souris", "Alberton", "Tignish", "Georgetown"]
+            }
+        ]
+    },
+    {
+        name: "UK",
+        regions: [
+            {
+                name: "England",
+                cities: ["London", "Manchester", "Birmingham", "Liverpool", "Leeds", "Sheffield", "Bristol", "Newcastle upon Tyne", "Nottingham", "Leicester"]
+            },
+            {
+                name: "Scotland",
+                cities: ["Edinburgh", "Glasgow", "Aberdeen", "Dundee", "Inverness", "Stirling", "Perth", "Kirkcaldy", "Paisley", "Livingston"]
+            },
+            {
+                name: "Wales",
+                cities: ["Cardiff", "Swansea", "Newport", "Wrexham", "Barry", "Cwmbran", "Bridgend", "Merthyr Tydfil", "Neath", "Pontypridd"]
+            },
+            {
+                name: "Northern Ireland",
+                cities: ["Belfast", "Derry/Londonderry", "Newtownabbey", "Bangor", "Lisburn", "Newry", "Carrickfergus", "Coleraine", "Ballymena", "Craigavon"]
+            },
+            {
+                name: "Scotland",
+                cities: ["Edinburgh", "Glasgow", "Aberdeen", "Dundee", "Inverness", "Stirling", "Perth", "Kirkcaldy", "Paisley", "Livingston"]
+            },
+            {
+                name: "Wales",
+                cities: ["Cardiff", "Swansea", "Newport", "Wrexham", "Barry", "Cwmbran", "Bridgend", "Merthyr Tydfil", "Neath", "Pontypridd"]
+            },
+            {
+                name: "Northern Ireland",
+                cities: ["Belfast", "Derry/Londonderry", "Newtownabbey", "Bangor", "Lisburn", "Newry", "Carrickfergus", "Coleraine", "Ballymena", "Craigavon"]
+            },
+            {
+                name: "East Midlands",
+                cities: ["Derby", "Leicester", "Nottingham", "Lincoln", "Northampton", "Chesterfield", "Mansfield", "Loughborough", "Grantham", "Newark-on-Trent"]
+            },
+            {
+                name: "West Midlands",
+                cities: ["Birmingham", "Coventry", "Wolverhampton", "Solihull", "Stoke-on-Trent", "Walsall", "Dudley", "Telford", "West Bromwich", "Sutton Coldfield"]
+            },
+            {
+                name: "South West England",
+                cities: ["Bristol", "Plymouth", "Bournemouth", "Swindon", "Gloucester", "Exeter", "Cheltenham", "Torquay", "Truro", "Bath"]
+            }
+        ]
+    }
+    // Add more countries here...
+];
+
+// Function to populate the Country dropdown
+function populateCountries() {
+    const countrySelect = document.getElementById("country");
+
+    countries.forEach(country => {
+        const option = document.createElement("option");
+        option.value = country.name;
+        option.textContent = country.name;
+        countrySelect.appendChild(option);
+    });
+}
+
+// Function to populate the Region dropdown based on selected country
+function populateRegions() {
+    const countrySelect = document.getElementById("country");
+    const regionSelect = document.getElementById("region");
+    const selectedCountry = countrySelect.value;
+
+    // Clear existing options
+    regionSelect.innerHTML = '<option value="" selected disabled>Select region</option>';
+
+    if (selectedCountry) {
+        const country = countries.find(country => country.name === selectedCountry);
+        if (country) {
+            country.regions.forEach(region => {
+                const option = document.createElement("option");
+                option.value = region.name;
+                option.textContent = region.name;
+                regionSelect.appendChild(option);
+            });
+        }
+    }
+}
+
+// Function to populate the City dropdown based on selected region
+function populateCities() {
+    const countrySelect = document.getElementById("country");
+    const regionSelect = document.getElementById("region");
+    const citySelect = document.getElementById("city");
+    const selectedCountry = countrySelect.value;
+    const selectedRegion = regionSelect.value;
+
+    // Clear existing options
+    citySelect.innerHTML = '<option value="" selected disabled>Select city</option>';
+
+    if (selectedCountry && selectedRegion) {
+        const country = countries.find(country => country.name === selectedCountry);
+        if (country) {
+            const region = country.regions.find(region => region.name === selectedRegion);
+            if (region) {
+                region.cities.forEach(city => {
+                    const option = document.createElement("option");
+                    option.value = city;
+                    option.textContent = city;
+                    citySelect.appendChild(option);
+                });
+            }
+        }
+    }
+}
+
+// Populate countries dropdown on page load
+populateCountries();
+
+function toggleDropdown(elementId) {
+    var selectElement = document.getElementById(elementId);
+    var caretIcon = selectElement.nextElementSibling; // Get the caret icon next to the select element
+    var isSelectOpen = selectElement.classList.toggle("open"); // Toggle the 'open' class
+
+    // Update caret icon based on select visibility
+    if (isSelectOpen) {
+        caretIcon.classList.remove("fa-caret-down");
+        caretIcon.classList.add("fa-caret-up");
+    } else {
+        caretIcon.classList.remove("fa-caret-up");
+        caretIcon.classList.add("fa-caret-down");
+    }
+}
